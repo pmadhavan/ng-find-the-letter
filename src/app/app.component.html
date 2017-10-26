@@ -1,11 +1,13 @@
+
 <div class="container">
-  <div class="card card-block">
+  <h1> Can you find the correct letter?</h1>
+  <div class="wrapper  ">
 
   <div class="row">
         <div class="col-2 col-lg-12">
-            <div class="card card-block">
+            <div class=" ">
               <h1 class="text-center card-title huge-text">
-                {{mainRandomAlpha()}}
+                {{ mainAlphabet }}
               </h1>
 
             </div>
@@ -13,12 +15,11 @@
       </div>
     <p></p>
   <div class="row">
-    <div *ngFor=" let alphaOption of alphaOptions" class="col-3">
-        <div class="card card-block">
-          <!--<h1 class="text-center card-title option-text"> {{alphaOption}} </h1>-->
+    <div *ngFor=" let alphaOption of alphabetOptions" class="col-lg-3 col-md-3 col-sm-6">
+        <div class="card card-block" role="button" (click)="onOptionSelected(alphaOption)">
+          <h1 class="text-center card-title option-text"> {{alphaOption}} </h1>
         </div>
     </div>
   </div>
 </div>
-
   </div>
